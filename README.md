@@ -107,6 +107,19 @@ curl -X POST -H "Content-Type: application/json" -d '{"query":"What is ASL-GPT?"
 
 ---
 
+## 🧠 Model Training
+
+The sign recognition model (Squeezeformer) used in ASL-GPT was trained using a dedicated pipeline for landmark-based gesture recognition. For those interested in training or fine-tuning the model, you can find the complete training code and datasets in our **ASL-GPT-Training** repository:
+
+🔗 **Model Training Repo:** [https://github.com/mahmoudmokhiamar/Real-Time-ASL](https://github.com/mahmoudmokhiamar/Real-Time-ASL)
+
+This repo includes:
+- Data preprocessing scripts (Mediapipe landmarks)
+- Model architecture (Squeezeformer)
+- Training routines and evaluation tools
+
+---
+
 ## 📄 License
 
 See [LICENSE](./LICENSE) for details.
