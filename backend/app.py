@@ -3,11 +3,8 @@ import uuid
 import warnings
 from constants import *
 from flask_cors import CORS
-from rag_engine import get_answer
 from flask import send_from_directory,Flask, request, jsonify
-from video_to_text_inference import text_inference
-from capture_sign_from_video import capture_landmarks 
-from text_openai_corrector import correct_sign_language_sentence
+from modules import text_inference, capture_landmarks, correct_sign_language_sentence, get_answer
 
 warnings.filterwarnings("ignore")
 
