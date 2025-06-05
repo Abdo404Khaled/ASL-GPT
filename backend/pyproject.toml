@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "asl-gpt"
+version = "1.0.0"
+description = "ASL-GPT is an AI-powered assistant that enables seamless interaction between users and machines using American Sign Language (ASL). It combines computer vision and natural language processing to recognize ASL gestures and convert them into text, which is then processed by a powerful language model (GPT) to generate intelligent, context-aware responses."
+authors = ["Abdelrahman Mahmoud <mado4335@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+flask-cors = ">=5.0.1,<6.0.0"
+flask = ">=3.1.0,<4.0.0"
+opencv-python = ">=4.11.0.86,<5.0.0.0"
+pandas = ">=2.2.3,<3.0.0"
+langchain = ">=0.3.25,<0.4.0"
+langchain-openai = ">=0.3.16,<0.4.0"
+pyarrow = ">=20.0.0,<21.0.0"
+fastparquet = ">=2024.11.0,<2025.0.0"
+mediapipe = "^0.10.21"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
