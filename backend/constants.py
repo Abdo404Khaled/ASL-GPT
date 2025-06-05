@@ -7,8 +7,8 @@ from langchain_core.prompts import \
 )
 
 
-RAG_CHROMA_PATH = "assets/chroma"
-PDF_META_CHROMA_PATH = "assets/pdf_db/chroma/pdf_metadata"
+RAG_CHROMA_PATH = r"backend/assets/chroma"
+PDF_META_CHROMA_PATH = r"backend/assets/pdf_db/chroma/pdf_metadata"
 
 PROMPT_TEMPLATE = ChatPromptTemplate.from_template(
 """

@@ -7,7 +7,7 @@ import tensorflow as tf
 
 def text_inference(parquet_file) -> str:
 
-    with open("assets/inference_args.json", "r") as f:
+    with open("backend/assets/inference_args.json", "r") as f:
         inference_config = json.load(f)
 
     selected_columns = inference_config["selected_columns"]
@@ -20,7 +20,7 @@ def text_inference(parquet_file) -> str:
 
     frames = df[selected_columns].to_numpy(dtype=np.float32)
 
-    model_path = "assets/models/model.tflite"
+    model_path = "backend/assets/models/model.tflite"
     interpreter = tf.lite.Interpreter(model_path=model_path)
 
     input_details = interpreter.get_input_details()
@@ -41,7 +41,7 @@ def text_inference(parquet_file) -> str:
     prediction_fn = interpreter.get_signature_runner("serving_default")
     output = prediction_fn(inputs=frames)
 
-    with open("assets/character_to_prediction_index.json", "r") as f:
+    with open("backend/assets/character_to_prediction_index.json", "r") as f:
         character_map = json.load(f)
 
     rev_character_map = {v: k for k, v in character_map.items()}
